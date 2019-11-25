@@ -1,0 +1,191 @@
+/*@font-face
+{
+font-family: Zapfino;
+src: url('../fonts/Violina Regular.ttf')
+}*/
+@font-face
+{
+    font-family: Violana;
+    src: url('../fonts/Violina Regular.ttf')
+}
+html body{font-family: Violana;font-size: 12px;}
+h1, h2, h3, h4, h5, h6{font-family: Violana;}
+h1 {font-size:20px;padding: 30px 0px 0px;font-weight: bold}
+
+#header, #content, #menu, #footer, #sesion {    
+    width: 1000px;    
+    margin: 0 auto;
+}
+
+#header{
+    height: 160px;
+}
+#header h1 {
+    margin-left: 180px;
+    font-family: Violana;
+    font-size: 35px;
+    padding: 50px 0px 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#header h2 {
+    margin-left: 190px;
+    font-family: Violana;
+    font-size: 18px;
+}
+
+#header img {                       
+    width: 140px;
+    height: auto;
+    position: relative;
+    float: left;
+    margin-top: 25px
+}
+#sesion{
+
+}
+
+#sesion h2{
+    font-size: 15px;
+    padding:0px 15px 15px; 
+    float: right;    
+}
+#sesion h2 strong{
+    font-weight: bold;
+    text-decoration: underline
+}
+
+#menu{
+    border: 0px none;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#menu ul{
+    list-style-type: none;
+}
+
+/* #menu ul li{
+    display: inline;
+} */
+
+#menu ul li a{
+    display: block;
+    padding: 5px 35px;
+    margin-left: 0px;
+    text-decoration: none;
+    border-bottom: 3px solid #2874A6;
+    border-top: 3px solid #2874A6;
+    color: #3498DB;
+    font-family: Violana;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+#menu ul li a:hover{
+    border-bottom: 3px solid #3498DB;
+    border-top: 3px solid #3498DB;
+    color: #2874A6;
+    font-weight: bold;
+}
+#menu ul > li{
+    float: left;
+}
+#menu ul li ul{
+    display: none;
+    position: absolute;
+    min-width: 150px;
+}
+#menu ul li:hover > ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 22px;
+}
+#menu ul li ul li{
+    background: white;
+    margin: 4px 0px;
+    position: relative;
+    align-self: center;
+}
+#menu ul li ul li ul{
+    right: -150px;
+    top: 0;
+}
+#content{
+    padding: 20px 0px;
+    min-height: 300px;
+}
+#content #table{
+    width: 95%;
+    margin: 5px 0px    
+}
+#content #table thead{  
+    font-weight: bold;
+    text-align: center;    
+}
+#content #table tbody{
+    font-size: 20px;
+}
+#content #table tbody td{
+    padding: 2px;
+    border-bottom: 1px solid #E3E3E3;
+    text-align: center;
+}
+#content .buttons{
+
+}    
+#content .buttons ul{
+    list-style-type: none;
+}
+#content .buttons ul li{
+    display: inline;
+}
+
+#content .buttons ul li a{
+    margin: 0px 10px 0px 0px;
+    padding: 8px 20px;
+    border: 1px solid #e3e3e3;
+    color: #ffffff;
+    background: #2f2f2f;
+    display: inline-block;
+    text-decoration: none
+}
+
+#content .buttons ul li a:hover{
+    color: #ffffff;
+    background: #1a1a1a;
+    text-decoration: none
+}
+
+#content .buttons ul li input{
+    margin: 0px 10px 0px 0px;
+    padding: 6px 20px;
+    border: 1px solid #e3e3e3;
+    color: #ffffff;
+    background: #2f2f2f;
+    display: inline-block;
+    text-decoration: none
+}
+
+#content .buttons ul li input:hover{
+    color: #ffffff;
+    background: #1a1a1a;
+    text-decoration: none;
+    cursor: pointer
+}
+
+#content h2{
+    padding: 50px;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#footer {
+    text-align: center; 
+    font-size: 17px;
+    text-decoration: none;
+}
