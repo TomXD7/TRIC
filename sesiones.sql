@@ -5,7 +5,7 @@ create table rol(
 	rol varchar(30) not null
 
 );
-
+-- comentario
 create table menu(
 idmenu int NOT NULL identity,
 menu varchar(50) NOT NULL,
@@ -31,7 +31,7 @@ create table usuario(
 	apellidos varchar(30) not null,
 	correo varchar(50) not null,
 	telefono varchar(8) not null,
-	contraseña varchar(100) not null,
+	contraseÃ±a varchar(100) not null,
 	idrol int not null,
 	foreign key (idrol) references rol (idrol)
 );
