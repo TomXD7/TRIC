@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+@font-face
+{
+    font-family: Violana;
+    src: url('../fonts/Violina Regular.ttf')
+}
+html body{font-family: Violana;font-size: 12px;}
+h1, h2, h3, h4, h5, h6{font-family: Violana;}
+h1 {font-size:50px;padding: 30px 0px 0px;font-weight: bold; }
+h2 {font-size:50px;padding: 30px 0px 0px; text-align: center; font-weight: normal;}
+.login {margin: 0 auto}
+.login td{padding: 5px 0px}
+#header >h1{margin-left: 0px;padding-top: 110px;}
+#content >h1{text-align: center} 
+.flex-contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    cursor: pointer;
+}
+.item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:  center;
+    align-items: center;
+}
+img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:  center;
+    align-items: center;
+    height: auto;
+    width: 65%;
+
+}
+article{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.item-texto{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.item-text{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.textofinal{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-end;
+    height: 275px;
+
+}
+/*.fondo{
+    background-color: lightgray;
+    height: 250px;
+}*/
+.caja{
+    margin: auto;
+}
+h3{
+    display: inline;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    margin: 1px;
+
+}
+.fondo2{
+    background: url(../IMAGENES/g1.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    min-height:780px;
+    position: relative;
+    margin: auto;
+}
+
+.row label {
+    color: white;
+}
+.row legend{
+    color: white;
+}
+.fondotxt{
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+p{
+    margin: 5px;
+}
+/* menu*/
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav a{
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background-color: rgb(13, 122, 165);
+    color: white;
+    text-decoration: none;
+}
+.nav a:hover{
+    background-color:rgb(49, 52, 219);
+}
+.nav>a>div.desplegable{
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+button{
+    margin-top: 100px;
+    line-height: 30px;
+    padding: 6px;
+    background-color: rgba(255, 255, 255, 0.527);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 2px solid rgb(73, 70, 240);
+    display: block;
+    width: 100px;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;   
+}
+button a{
+    color: white;
+    text-decoration: none;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+nav ul li  {
+    display: inline;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    margin: 1px;
+}
+.caja{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+.fboton{
+    display: flex;
+    justify-content: center;
+}
+
+[class*="col-"]{
+    width: 100%;
+}
+
+@media only screen and (min-width:600px){
+    /*para tablets*/
+    .col-t-1{ width: 8.33%;}
+    .col-t-2{ width: 16.66%;}
+    .col-t-3{ width: 25%;}
+    .col-t-4{ width: 33.33%;}
+    .col-t-5{ width: 41.66%;}
+    .col-t-6{ width: 50%;}
+    .col-t-7{ width: 58.33%;}
+    .col-t-8{ width: 66.66%;}
+    .col-t-9{ width: 75%;}
+    .col-t-10{ width: 83.33%;}
+    .col-t-11{ width: 91.66%;}
+    .col-t-12{ width: 100%;}
+
+    .fontt {
+        font-size: 30px;
+    }
+    .fuente2 {
+        font-size: 20px;
+
+    }
+    button{
+        width: 20%;
+    }
+    .flex-contenedor{
+        flex-wrap: nowrap;
+    }
+    .fondo2{
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width:768px){
+    /*para moviles*/
+    .col-1{ width: 8.33%;}
+    .col-2{ width: 16.66%;}
+    .col-3{ width: 25%;}
+    .col-4{ width: 33.33%;}
+    .col-5{ width: 41.66%;}
+    .col-6{ width: 50%;}
+    .col-7{ width: 58.33%;}
+    .col-8{ width: 66.66%;}
+    .col-9{ width: 75%;}
+    .col-10{ width: 83.33%;}
+    .col-11{ width: 91.66%;}
+    .col-12{ width: 100%;}
+
+    .flex-contenedor{
+        flex-wrap: nowrap;
+    }
+    .fontt {
+        font-size: 40px;
+    }
+    .fuente2 {
+        font-size: 30px;
+    }
+    .fondo2{
+        flex-direction: row;
+    } 
+}
+
+[class*="col-"]{
+    float: left;
+    padding: 15px;
+}
+
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+#button{
+    width: 100px;
+    display: block;
+    border-radius: 7px;
+    margin: 0 auto;
+    padding: 5px;
+    font-family: Violana;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 3px solid #2874A6;
+    border-top: 3px solid #2874A6;
+    background-color: white;
+    cursor: pointer;   
+}
+#Res{
+    width: 100px;
+    display: block;
+    border-radius: 7px;
+    margin: 0 auto;
+    padding: 5px;
+    font-family: Violana;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 3px solid #2874A6;
+    border-top: 3px solid #2874A6;
+    background-color: white;
+    cursor: pointer;
+    color: black;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+nav ul li {
+    display: inline;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    margin: 1px;
+}
+.caja{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+.fboton{
+    display: flex;
+    justify-content: center;
+}
+footer p{
+    padding: 10px;
+    background-color: dodgerblue;
+    text-align: center;
+    color: white;
+}
