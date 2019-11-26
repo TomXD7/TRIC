@@ -1,8 +1,4 @@
-<%-- 
-    Document   : Vehiculo
-    Created on : 11-26-2019, 10:39:26 AM
-    Author     : leyss
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
