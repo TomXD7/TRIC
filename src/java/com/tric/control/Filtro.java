@@ -38,7 +38,6 @@ public class Filtro implements Filter {
         if (logueo == null) {
             req.getRequestDispatcher("index.jsp").forward(request, response);
         }
-
         //Segundo, realizamos las acciones PRE-FILTRO
         //Opcionalmente, invocamos a los filtros encadenados
         chain.doFilter(req, res);

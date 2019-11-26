@@ -62,3 +62,4 @@ select * from menu;
 insert into permiso(idmenu, idrol) select idmenu, 1 from menu;
 insert into permiso(idmenu, idrol) select idmenu, 2 from menu where idmenu in (1,2,3,4,5);
 
+insert into usuario values('TomasXD', 'Tomás', 'Morataya', 'temf1999@gmail.com', '74217453', lower(CONVERT(VARCHAR(64),HashBytes('SHA2_256', 'admin'),2)), 1);
