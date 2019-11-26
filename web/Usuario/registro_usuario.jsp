@@ -4,6 +4,7 @@
     <head>
         <title>TRIC</title>
         <link rel="stylesheet" type="text/css" href="../css/index.css" />
+        <link rel="stylesheet" href="css/tabla.css" type="text/css" />
     </head>
     <body>
         <div id="header">
