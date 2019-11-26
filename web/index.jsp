@@ -40,8 +40,7 @@
                     <tr><td><input type="password" name="txtClave"></td></tr>
                     <tr><td>
                             <div class="buttons">
-                                <input id="button" type="submit" value="Entrar" name="btnEntrar"/>
-                                <br/>
+                                <input id="button" type="submit" value="Entrar" name="btnEntrar"/> <br> 
                                 <a href="Usuario/registro_usuario.jsp" id="Res"> Registrarse </a>
                             </div>
                         </td></tr>

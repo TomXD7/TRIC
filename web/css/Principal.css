@@ -1,26 +1,74 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11-26-2019, 10:27:52 AM
+    Author     : josue
+*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
 }
-@font-face
-{
-    font-family: Violana;
-    src: url('../fonts/Violina Regular.ttf')
+@font-face{
+    font-family: mifuente2;
+    src: 
+     url('../FUENTES/CustomCraft-Regular.ttf') format('truetype');
 }
-@font-face
-{
-    font-family: Mangostana;
-    src: url('../fonts/Mangostana.ttf')
+@font-face{
+    font-family: myfont;
+    src : url(../FUENTES/horrendo.ttf) format('woff');
 }
-html body{font-family: Violana;font-size: 12px;}
-h2, h3, h4, h5, h6{font-family: Mangostana;}
-h1 {font-size:80px;padding: 30px 0px 0px;font-weight: normal; color:white; font-family: Mangostana;}
-h2 {font-size:50px;padding: 30px 0px 0px; text-align: center; font-weight: Mangostana;}
-.login {margin: 0 auto; }
-.login td{padding: 5px 0px; display: flex; align-content: center; justify-content: center;}
-#header >h1{margin-left: 0px;padding-top: 110px;}
-#content >h1{text-align: center} 
+.fondito{
+    background-color: rgba(160, 217, 231, 0.534);
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.contenedor img{
+    width: 350px;
+    height: 250px;
+    margin: auto;
+    display: block;
+}
+
+.ima{
+    text-decoration: none;
+    display: block;
+    width: 100px;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+}
+.ima:hover{
+    box-shadow: 0 3px 10px rgb(134, 200, 226);
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ima{
+    text-decoration: none;
+    display: block;
+    width: 100px;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+}
+.ima:hover{
+    box-shadow: 0 3px 10px rgb(26, 17, 158);
+}
+.fontt {
+    font-family: myfont;
+    font-size: 20px;
+}
+.fuente2 {
+    font-family: mifuente2;
+    font-size: 20px;
+}
 .flex-contenedor{
     display: flex;
     flex-wrap: wrap;
@@ -40,13 +88,15 @@ img{
     align-items: center;
     height: auto;
     width: 65%;
-
+    
 }
 article{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between; 
+    height: 490px;
+    width: 400px;
 }
 
 .item-texto{
@@ -80,26 +130,19 @@ article{
     margin: auto;
 }
 h3{
-    display: inline;
-    width: 100%;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    font-size: 18px;
-    margin: 1px;
-
-}
-.caja{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #85C1E9;
-    padding: 15px;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 5px;
+        display: inline;
+        width: 100%;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        font-size: 18px;
+        margin: 1px;
+     
 }
 .fondo2{
+    background: url(../IMAGENES/g1.jpg) no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -109,17 +152,6 @@ h3{
     position: relative;
     margin: auto;
 }
-/*color para el fondo*/
-body{
-    background-color: #154360;
-}  
-
-.row label {
-    color: white;
-}
-.row legend{
-    color: white;
-}
 .fondotxt{
     padding: 30px;
     background-color: rgb(255, 255, 255);
@@ -127,6 +159,25 @@ body{
 }
 p{
     margin: 5px;
+}
+.boton{
+    margin-top: 100px;
+    line-height: 30px;
+    padding: 6px;
+    background-color: rgba(36, 45, 170, 0.527);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 2px solid rgb(82, 70, 240);
+    display: block;
+    width: 100px;
+    text-align: center;
+    margin: auto;
+}
+.boton:hover{
+    background-color: rgba(41, 79, 248, 0.979);
+    /*color: dodgerblue;*/
+    box-shadow: 0 3px 10px black;
 }
 /* menu*/
 .nav{
@@ -150,70 +201,6 @@ p{
     position: absolute;
     top: 100%;
     left: 0;
-}
-.row::after{
-    content: "";
-    clear: both;
-    display: table;
-}
-button{
-    margin-top: 100px;
-    line-height: 30px;
-    padding: 6px;
-    background-color: rgba(255, 255, 255, 0.527);
-    color: white;
-    border-radius: 10px;
-    text-decoration: none;
-    border: 2px solid rgb(73, 70, 240);
-    display: block;
-    width: 100px;
-    text-align: center;
-    margin: auto;
-    cursor: pointer;   
-}
-button a{
-    color: white;
-    text-decoration: none;
-}
-
-nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-nav ul li  {
-    display: inline;
-    width: 100%;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    font-size: 18px;
-    margin: 1px;
-}
-.caja{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 15px;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 5px;
-}
-.row label {
-    color: white;
-}
-.row legend{
-    color: white;
-}
-.row::after{
-    content: "";
-    clear: both;
-    display: table;
-}
-.fboton{
-    display: flex;
-    justify-content: center;
 }
 
 [class*="col-"]{
@@ -240,7 +227,7 @@ nav ul li  {
     }
     .fuente2 {
         font-size: 20px;
-
+        
     }
     button{
         width: 20%;
@@ -251,15 +238,10 @@ nav ul li  {
     .fondo2{
         flex-direction: row;
     }
-    .row::after{
-    content: "";
-    clear: both;
-    display: table;
-}
 }
 
 @media only screen and (min-width:768px){
-    /*para moviles*/
+    /*para mobiles*/
     .col-1{ width: 8.33%;}
     .col-2{ width: 16.66%;}
     .col-3{ width: 25%;}
@@ -284,7 +266,7 @@ nav ul li  {
     }
     .fondo2{
         flex-direction: row;
-    } 
+    }
 }
 
 [class*="col-"]{
@@ -297,36 +279,16 @@ nav ul li  {
     clear: both;
     display: table;
 }
-#button{
-    width: 100px;
-    display: block;
-    border-radius: 7px;
-    margin: 0 auto;
-    padding: 5px;
-    font-family: Violana;
-    text-align: center;
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 3px solid #2874A6;
-    border-top: 3px solid #2874A6;
-    background-color: white;
-    cursor: pointer;   
-}
-#Res{
-    width: 100px;
-    display: block;
-    border-radius: 7px;
-    margin: 0 auto;
-    padding: 5px;
-    font-family: Violana;
-    text-align: center;
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 3px solid #2874A6;
-    border-top: 3px solid #2874A6;
-    background-color: white;
+
+button{
+    padding: 10px;
+    font-weight: 300;
+    font-size: 15px;
+    width: 70%;
+    background-color: green;
+    color: white;
     cursor: pointer;
-    color: black;
+    border:0;
 }
 nav ul{
     list-style-type: none;
@@ -356,9 +318,4 @@ nav ul li {
     display: flex;
     justify-content: center;
 }
-footer p{
-    padding: 10px;
-    background-color: dodgerblue;
-    text-align: center;
-    color: white;
-}
+
