@@ -5,7 +5,7 @@
     <p>
         <a href="">Inicio</a> |
         <a href="">Reservaciones</a> |
-        <a href="">Ofercemos</a> |
+        <a href="">Ofrecemos</a> |
         <a href="">Que Somos</a> |
     </p>
     <br/>
