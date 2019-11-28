@@ -4,7 +4,7 @@
     <head>
         <title>TRIC</title>
         <link rel="stylesheet" type="text/css" href="../css/index.css" />
-        <link rel="stylesheet" href="css/tabla.css" type="text/css" />
+        <link rel="stylesheet" href="../css/main.css" type="text/css" />
     </head>
     <body>
         <div id="header">
@@ -54,6 +54,8 @@
                     </tr>
                 </table>
                 <br/>
-                <input type="submit" name="btnEnviar" id="button">
+                <input type="submit" name="btnEnviar" id="button" value="Resgistrarse">
+                <br/>
+                <a href="../index.jsp" id="Res"> Cancelar </a>
             </form>
         </div>
