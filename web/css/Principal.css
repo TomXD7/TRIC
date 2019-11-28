@@ -1,25 +1,17 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 11-26-2019, 10:27:52 AM
-    Author     : josue
-*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
 }
-@font-face{
-    font-family: mifuente2;
-    src: 
-     url('../FUENTES/CustomCraft-Regular.ttf') format('truetype');
+@font-face
+{
+    font-family: Violana;
+    src: url('../fonts/Violina Regular.ttf')
 }
-@font-face{
-    font-family: myfont;
-    src : url(../FUENTES/horrendo.ttf) format('woff');
+@font-face
+{
+    font-family: Mangostana;
+    src: url('../fonts/Mangostana.ttf')
 }
 .fondito{
     background-color: rgba(160, 217, 231, 0.534);
@@ -28,10 +20,12 @@ and open the template in the editor.
     content: "";
     clear: both;
     display: table;
+    width: auto;
+    height: auto;
 }
 .contenedor img{
-    width: 350px;
-    height: 250px;
+    width: 250px;
+    height: 150px;
     margin: auto;
     display: block;
 }
@@ -46,9 +40,6 @@ and open the template in the editor.
 }
 .ima:hover{
     box-shadow: 0 3px 10px rgb(134, 200, 226);
-}
-body{
-    font-family: Arial, Helvetica, sans-serif;
 }
 .ima{
     text-decoration: none;
@@ -88,17 +79,16 @@ img{
     align-items: center;
     height: auto;
     width: 65%;
-    
+
 }
 article{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between; 
-    height: 490px;
+    height: 300px;
     width: 400px;
 }
-
 .item-texto{
     display: flex;
     flex-direction: column;
@@ -130,16 +120,16 @@ article{
     margin: auto;
 }
 h3{
-        display: inline;
-        width: 100%;
-        padding-bottom: 10px;
-        padding-top: 10px;
-        text-decoration: none;
-        color: rgb(0, 0, 0);
-        text-align: center;
-        font-size: 18px;
-        margin: 1px;
-     
+    display: inline;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    margin: 1px;
+
 }
 .fondo2{
     background: url(../IMAGENES/g1.jpg) no-repeat 0px 0px;
@@ -160,25 +150,27 @@ h3{
 p{
     margin: 5px;
 }
-.boton{
-    margin-top: 100px;
-    line-height: 30px;
+.bo{
+    margin-top: 10px;
+    line-height: 5px;
     padding: 6px;
+    text-align: center;
     background-color: rgba(36, 45, 170, 0.527);
     color: white;
-    border-radius: 10px;
+    border-radius: 3px;
     text-decoration: none;
-    border: 2px solid rgb(82, 70, 240);
+    justify-content: center;
+    border: 1px solid rgb(82, 70, 240);
     display: block;
     width: 100px;
-    text-align: center;
-    margin: auto;
+    margin: 0 auto;
 }
-.boton:hover{
+.bo:hover{
     background-color: rgba(41, 79, 248, 0.979);
     /*color: dodgerblue;*/
-    box-shadow: 0 3px 10px black;
+    box-shadow: 0 3px 5px black;
 }
+
 /* menu*/
 .nav{
     display: flex;
@@ -197,12 +189,15 @@ p{
 .nav a:hover{
     background-color:rgb(49, 52, 219);
 }
+.color{
+    background-color: black;
+    
+}
 .nav>a>div.desplegable{
     position: absolute;
     top: 100%;
     left: 0;
 }
-
 [class*="col-"]{
     width: 100%;
 }
@@ -227,9 +222,9 @@ p{
     }
     .fuente2 {
         font-size: 20px;
-        
+
     }
-    button{
+    #button{
         width: 20%;
     }
     .flex-contenedor{
@@ -238,6 +233,10 @@ p{
     .fondo2{
         flex-direction: row;
     }
+}
+[class*="col-"]{
+    float: left;
+    padding: 15px;
 }
 
 @media only screen and (min-width:768px){
@@ -268,19 +267,13 @@ p{
         flex-direction: row;
     }
 }
-
-[class*="col-"]{
-    float: left;
-    padding: 15px;
-}
-
 .row::after{
     content: "";
     clear: both;
     display: table;
 }
 
-button{
+#button{
     padding: 10px;
     font-weight: 300;
     font-size: 15px;
@@ -307,6 +300,9 @@ nav ul li {
     font-size: 18px;
     margin: 1px;
 }
+body{
+    background-color: #A9CCE3;
+}
 .caja{
     display: flex;
     flex-wrap: wrap;
@@ -318,4 +314,3 @@ nav ul li {
     display: flex;
     justify-content: center;
 }
-
