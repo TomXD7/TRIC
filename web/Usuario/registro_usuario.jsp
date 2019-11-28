@@ -4,6 +4,7 @@
     <head>
         <title>TRIC</title>
         <link rel="stylesheet" type="text/css" href="../css/index.css" />
+        <link rel="stylesheet" href="../css/main.css" type="text/css" />
     </head>
     <body>
         <div id="header">
@@ -22,6 +23,39 @@
             <h2>Registrate.</h2>
             <br/>
             <form name="resgistro" action="Usuarios?accion=insertar">
-                
+                <table id="table">
+                    <tr>
+                        <th>  </th>
+                        <th>  </th>
+                    </tr>
+                    <tr>
+                        <td> Usuario: </td>
+                        <td> <input type="text" name="txtUsuario" size="35"> </td>
+                    </tr>
+                    <tr>
+                        <td> Nombre: </td>
+                        <td> <input type="text" name="txtNombre" size="35"> </td>
+                    </tr>
+                    <tr>
+                        <td> Apellido: </td>
+                        <td> <input type="text" name="txtApellido" size="35"> </td>
+                    </tr>
+                    <tr>
+                        <td> Correo: </td>
+                        <td> <input type="text" name="txtCorreo" size="35"> </td>
+                    </tr>
+                    <tr>
+                        <td> Telefono: </td>
+                        <td> <input type="text" name="txtCorreo" size="35"> </td>
+                    </tr>
+                    <tr>
+                        <td> Contraseña: </td>
+                        <td> <input type="password" name="txtPassword" size="35"> </td>
+                    </tr>
+                </table>
+                <br/>
+                <input type="submit" name="btnEnviar" id="button" value="Resgistrarse">
+                <br/>
+                <a href="../index.jsp" id="Res"> Cancelar </a>
             </form>
         </div>

@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <html>
     <head>
         <title>TRIC</title>
@@ -40,7 +41,8 @@
                     <tr><td><input type="password" name="txtClave"></td></tr>
                     <tr><td>
                             <div class="buttons">
-                                <input id="button" type="submit" value="Entrar" name="btnEntrar"/> <br> 
+                                <input id="button" type="submit" value="Entrar" name="btnEntrar"/>
+                                <br/>
                                 <a href="Usuario/registro_usuario.jsp" id="Res"> Registrarse </a>
                             </div>
                         </td></tr>
