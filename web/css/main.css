@@ -20,6 +20,7 @@ h1 {font-size:20px;padding: 30px 0px 0px;font-weight: bold}
     height: 160px;
 }
 #header h1 {
+    /*color: white;*/
     margin-left: 180px;
     font-family: Violana;
     font-size: 35px;
@@ -28,6 +29,7 @@ h1 {font-size:20px;padding: 30px 0px 0px;font-weight: bold}
     font-weight: bold;
 }
 #header h2 {
+    /*color: white;*/
     margin-left: 190px;
     font-family: Violana;
     font-size: 18px;
@@ -126,6 +128,7 @@ h1 {font-size:20px;padding: 30px 0px 0px;font-weight: bold}
     text-align: center;    
 }
 #content #table tbody{
+    
 
 }
 #content #table tbody td{
@@ -134,7 +137,7 @@ h1 {font-size:20px;padding: 30px 0px 0px;font-weight: bold}
     text-align: center;
 }
 #content .buttons{
-
+    display: flex;
 }    
 #content .buttons ul{
     list-style-type: none;
@@ -150,13 +153,12 @@ h1 {font-size:20px;padding: 30px 0px 0px;font-weight: bold}
     color: #ffffff;
     background: #2f2f2f;
     display: inline-block;
-    text-decoration: none
+    text-decoration: none; 
 }
-
 #content .buttons ul li a:hover{
     color: #ffffff;
     background: #1a1a1a;
-    text-decoration: none
+    text-decoration: none;
 }
 
 #content .buttons ul li input{
@@ -166,14 +168,15 @@ h1 {font-size:20px;padding: 30px 0px 0px;font-weight: bold}
     color: #ffffff;
     background: #2f2f2f;
     display: inline-block;
-    text-decoration: none
+    text-decoration: none;
 }
 
 #content .buttons ul li input:hover{
     color: #ffffff;
     background: #1a1a1a;
     text-decoration: none;
-    cursor: pointer
+    cursor: pointer;
+    display: flex;
 }
 
 #content h2{
@@ -182,7 +185,6 @@ h1 {font-size:20px;padding: 30px 0px 0px;font-weight: bold}
     text-align: center;
     font-weight: bold;
 }
-
 #footer {
     text-align: center; 
     font-size: 17px;
