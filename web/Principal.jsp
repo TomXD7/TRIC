@@ -30,7 +30,7 @@
                 </article>
                 <article class="col-4 col-t-6  ima">
                     <img src="img/jeep.jpg"  alt="mi imagen">
-                    <br>
+                    <br>.
                     <a>Economico</a><br>   
                     <a><i class="icon icon-travel-car">2/4</i></a><br>
                     <a><i class="icon icon-user">5</i></a><br>
