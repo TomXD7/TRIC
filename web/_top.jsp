@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="css/main.css" type="text/css" />
         <link rel="stylesheet" href="css/reset.css" type="text/css" />
         <link rel="stylesheet" href="css/tabla.css" type="text/css" />
+        <link rel="stylesheet" href="css/Principal.css" type="text/css"/>
     </head>
     <body>
         <div id="header">
