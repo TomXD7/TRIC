@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+@font-face
+{
+    font-family: Violana;
+    src: url('../fonts/Violina Regular.ttf')
+}
+@font-face
+{
+    font-family: Mangostana;
+    src: url('../fonts/Mangostana.ttf')
+}
+
+
