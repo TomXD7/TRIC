@@ -1,10 +1,77 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Nov 28, 2019, 12:22:43 PM
-    Author     : Roberto Rodriguez
-*/
+.banner-area {
+  background: url(../img/header-bg.jpg) center;
+  background-size: cover;
+}
 
+.banner-area .overlay-bg {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 767px) {
+  .fullscreen {
+    height: 100% !important;
+  }
+}
+
+.banner-content {
+  text-align: left;
+}
+
+.banner-content h1 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1em;
+  margin-top: 20px;
+}
+
+.banner-content h1 span {
+  font-weight: 700;
+}
+
+@media (max-width: 991.98px) {
+  .banner-content h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .banner-content h1 br {
+    display: none;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .banner-content h1 {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-content h1 {
+    font-size: 32px;
+  }
+}
+
+.banner-content h6 {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 1280px) {
+  .banner-content br {
+    display: none;
+  }
+}
+
+@media (max-width: 763px) {
+  .banner-content h6, .banner-content p, .banner-content a {
+    display: none;
+  }
+  .banner-content h1 {
+    text-align: center;
+    padding-top: 50px;
+    display: block !important;
+  }
+}
