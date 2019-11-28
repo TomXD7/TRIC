@@ -1,5 +1,5 @@
 use tric;
-drop database tric;
+-- drop database tric;
 create table rol(
 	idrol int primary key identity,
 	rol varchar(30) not null
@@ -60,13 +60,6 @@ insert into menu(menu, url, idpadre) values( 'Seguros', '/Seguros', 6); -- 9
 select * from menu;
 
 insert into permiso(idmenu, idrol) select idmenu, 1 from menu;
-insert into permiso(idmenu, idrol) select idmenu, 2 from menu where idmenu in (1,2,3,4
+insert into permiso(idmenu, idrol) select idmenu, 2 from menu where idmenu in (1,2,3,4,5);
 
-
-insert into rol(rol) values('Chove');
-
-insert into rol(rol) values( 'Usuario');
-
-insert into usuario values('Chove', 'Roberto', 'Mendez', 'rdaniel.mr3@gmail.com', '70000002', lower(CONVERT(VARCHAR(64),HashBytes('SHA2_256', 'admin'),2)), 1);
-
-select * from usuario;
+insert into usuario values('TomasXD', 'Tomás', 'Morataya', 'temf1999@gmail.com', '74217453', lower(CONVERT(VARCHAR(64),HashBytes('SHA2_256', 'admin'),2)), 1);

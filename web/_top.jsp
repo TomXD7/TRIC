@@ -7,10 +7,10 @@
     response.setHeader("Cache-Control", "no-store");
     response.setHeader("Pragma", "no-cache");
     response.setDateHeader("Expires", 0);
-    List<Menu> MenuPrincipal = (List<Menu>)sesion.getAttribute("MenuPrincipal");
-    if(MenuPrincipal == null){
+    List<Menu> MenuPrincipal = (List<Menu>) sesion.getAttribute("MenuPrincipal");
+    if (MenuPrincipal == null) {
         request.getRequestDispatcher("index.jsp").forward(request, response);
-    } 
+    }
 %>
 
 <!DOCTYPE html>
@@ -21,6 +21,9 @@
         <link rel="stylesheet" href="css/main.css" type="text/css" />
         <link rel="stylesheet" href="css/reset.css" type="text/css" />
         <link rel="stylesheet" href="css/tabla.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/Principal.css"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script src="https://kit.fontawesome.com/2c3cae7245.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="header">
@@ -55,11 +58,11 @@
                         <ul>
                             <c:forEach var="submenu" items="${Permisos}">
                                 <c:if test="${submenu.idpadre != null}">
-                                <c:if test="${submenu.idpadre == menu.idmenu}">
-                                <li>
-                                    <a href="${pageContext.servletContext.contextPath}${submenu.url}?accion=${submenu.idmenu}">${submenu.menu}</a>
-                                </li>
-                                </c:if>
+                                    <c:if test="${submenu.idpadre == menu.idmenu}">
+                                        <li>
+                                            <a href="${pageContext.servletContext.contextPath}${submenu.url}?accion=${submenu.idmenu}">${submenu.menu}</a>
+                                        </li>
+                                    </c:if>
                                 </c:if>
                             </c:forEach>
                         </ul>
