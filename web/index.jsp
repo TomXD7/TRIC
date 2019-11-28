@@ -17,7 +17,12 @@
                 </div> 
             </div>  
         </div>
-        <div id="content">
+        <div id="content"> 
+            <hr/>
+        <div class="col-12 col-t-12  fondo2" >
+            <article class="col-4 col-t-3 ">
+            </article>
+            <article class="col-4 col-t-8 caja">
             <hr/>
             <h2>Inicio de Sesion</h2><br/>
             <center>
@@ -26,8 +31,7 @@
                         <p><strong style="color: red">Usuario y/o contraseña incorrectos</strong></p>
                     </c:if>
                 </c:if>
-            </center>
-
+            </center> 
             <form name="main" action="Login?accion=login" method="POST">
                 <table class="login">
                     <tr><td>Usuario</td></tr>
@@ -36,8 +40,7 @@
                     <tr><td><input type="password" name="txtClave"></td></tr>
                     <tr><td>
                             <div class="buttons">
-                                <input id="button" type="submit" value="Entrar" name="btnEntrar"/>
-                                <br/>
+                                <input id="button" type="submit" value="Entrar" name="btnEntrar"/> <br> 
                                 <a href="Usuario/registro_usuario.jsp" id="Res"> Registrarse </a>
                             </div>
                         </td></tr>
@@ -45,6 +48,8 @@
             </form>
             <br/><br/><br/><br/>
             <hr/>
-        </div>
+            </article>  
+            </div>
+            </div>
     </body>
 </html>
