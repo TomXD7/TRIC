@@ -27,7 +27,7 @@ public class Vehiculos extends HttpServlet {
                 request.getSession().removeAttribute("resultado");
             }
         }else if(accion.equals("7")){
-            request.getRequestDispatcher("Mantenimiento/Vehiculo.jsp").forward(request, response);
+            request.getRequestDispatcher("Vehiculo/vehiculo_consulta.jsp").forward(request, response);
         }
     }
     @Override
