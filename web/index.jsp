@@ -43,7 +43,7 @@
                             <div class="buttons">
                                 <input id="button" type="submit" value="Entrar" name="btnEntrar"/>
                                 <br/>
-                                <a href="Usuario/registro_usuario.jsp" id="Res"> Registrarse </a>
+                                <a href="Usuarios?accion=insertar" id="Res"> Registrarse </a>
                             </div>
                         </td></tr>
                 </table>

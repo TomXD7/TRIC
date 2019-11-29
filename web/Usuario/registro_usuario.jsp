@@ -3,14 +3,14 @@
 <html>
     <head>
         <title>TRIC</title>
-        <link rel="stylesheet" type="text/css" href="../css/index.css" />
-        <link rel="stylesheet" href="../css/main.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="css/main.css" type="text/css" />
     </head>
     <body>
         <div id="header">
             <div class="col-12 col-t-12 flex-contenedor" >
                 <div class="col-3 col-t-4 ">
-                    <img src="../img/logo.png"  alt="mi imagen">
+                    <img src="img/logo.png"  alt="mi imagen">
                 </div>
                 <br>
                 <div class="col-6 col-t-4 item-texto">
@@ -56,6 +56,6 @@
                 <br/>
                 <input type="submit" name="btnEnviar" id="button" value="Resgistrarse">
                 <br/>
-                <a href="../index.jsp" id="Res"> Cancelar </a>
+                <a href="index.jsp" id="Res"> Cancelar </a>
             </form>
         </div>

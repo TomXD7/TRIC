@@ -86,6 +86,7 @@ public class Operaciones {
             throw ex;
         }
     }
+
     public static <T> ArrayList<T> getTodos(T entity) throws Exception {
         try {
             Persistencia accion = new Persistencia(entity,
@@ -96,6 +97,7 @@ public class Operaciones {
             throw ex;
         }
     }
+
     public static String[][] consultar(String sqlQuery, List<Object> params) throws Exception {
         String[][] resultados = null;
         try {
