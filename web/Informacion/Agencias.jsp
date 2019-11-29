@@ -2,7 +2,7 @@
 <%@include file = "../_top.jsp" %>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+       
     </head>
     <body>
         <h2> Aeropuerto Internacional. </h2>

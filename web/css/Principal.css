@@ -102,6 +102,11 @@ article{
     justify-content: center;
     align-items: center;
 }
+#logo{
+    display: none;
+    width: 35px;
+    height: auto;
+}
 .textofinal{
     display: flex;
     flex-wrap: wrap;

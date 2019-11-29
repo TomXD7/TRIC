@@ -12,8 +12,8 @@
                     <img src="img/logo.png"  alt="mi imagen">
                 </div>
                 <br>
-                <div class="col-6 col-t-4 item-texto">
-                    <h1>TRIC Rent a Car </h1>
+                <div class="col-8 col-t-4 textIma">
+                     <img src="img/text.png"  alt="mi imagen">
                 </div> 
             </div>  
         </div>

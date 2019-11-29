@@ -29,16 +29,16 @@
         <div id="header">
             <div class="row">
                 <div class="col-12 col-t-12 flex-contenedor" >
-                    <div class="col-3 col-t-4 ">
+                    <div class="col-2 col-t-4 ">
                         <img src="img/logo.png"  alt="mi imagen">
                     </div>
                     <br>
-                    <div class="col-6 col-t-4 item-texto">
-                        <h1>TRIC Rent a Car </h1>
+                    <div class="col-1 col-t-4 item-texto">
+                        <img src="img/text.png" style="width:400px;"  alt="mi imagen">
                         <br/>
-                        <h2>tricrentacar@gmail.com</h2>
+                        <p>tricrentacar@gmail.com</p>
                         <br/>
-                        <h2>(+503)75682363: WhatsApp</h2>
+                        <p>(+503)75682363: WhatsApp</p>
                         <br>
                     </div> 
                 </div>
