@@ -1,11 +1,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@include file = "../_top.jsp" %>
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-    </head>
-    <body>
-        <h2> Aeropuerto Internacional. </h2>
+<h2> Aeropuerto Internacional. </h2>
 <table id="table">
     <tr>
         <th> 1 </th>
@@ -103,7 +98,4 @@
         <td> Dom 08:00AM - 12:00PM </td>
     </tr>
 </table>
-</body>
 <%@include file = "../_down.jsp" %>
-    </body>
-</html>
