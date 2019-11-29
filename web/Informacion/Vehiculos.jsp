@@ -1,17 +1,14 @@
-<%-- 
-    Document   : Vehiculos
-    Created on : 11-29-2019, 12:46:57 PM
-    Author     : josue
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@include file = "../_top.jsp" %>
+        <h2> Aeropuerto Internacional. </h2>
+<table id="table">
+    <tr>
+        <th> 1 </th>
+        <th> Aeropuerto Intl. El Salvador. </th>
+        <th>  </th>
+    </tr>
+    <tr>
+</table>
+<br/>
+<br/>
+<%@include file = "../_down.jsp" %>

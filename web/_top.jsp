@@ -23,6 +23,8 @@
         <link rel="stylesheet" href="css/tabla.css" type="text/css" />
         <link rel="stylesheet" type="text/css" href="css/Principal.css"/>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+         <link rel="stylesheet" type="text/css" href="css/Mantenimiento.css" />
+        
         <script src="https://kit.fontawesome.com/2c3cae7245.js" crossorigin="anonymous"></script>
     </head>
     <body>
