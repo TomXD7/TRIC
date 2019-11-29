@@ -19,38 +19,37 @@
         </div>
         <div id="content"> 
             <hr/>
-        <div class="col-12 col-t-12  fondo2" >
-            <article class="col-4 col-t-3 ">
-            </article>
-            <article class="col-4 col-t-8 caja">
-            <hr/>
-            <h2>Inicio de Sesion</h2><br/>
-            <center>
-                <c:if test="${error!=null}">
-                    <c:if test="${error==2}">
-                        <p><strong style="color: red">Usuario y/o contraseña incorrectos</strong></p>
-                    </c:if>
-                </c:if>
-            </center> 
-            <form name="main" action="Login?accion=login" method="POST">
-                <table class="login">
-                    <tr><td>Usuario</td></tr>
-                    <tr><td><input type="text" name="txtUsuario" /></td></tr>
-                    <tr><td>Contraseña</td></tr>
-                    <tr><td><input type="password" name="txtClave"></td></tr>
-                    <tr><td>
-                            <div class="buttons">
-                                <input id="button" type="submit" value="Entrar" name="btnEntrar"/>
-                                <br/>
-                                <a href="Usuario/registro_usuario.jsp" id="Res"> Registrarse </a>
-                            </div>
-                        </td></tr>
-                </table>
-            </form>
-            <br/><br/><br/><br/>
-            <hr/>
-            </article>  
+            <div class="col-12 col-t-12  fondo2" >
+                <article class="col-4 col-t-3 ">
+                </article>
+                <article class="col-4 col-t-8 caja">
+                    <hr/>
+                    <h2>Inicio de Sesion</h2><br/>
+                    <center>
+                        <c:if test="${error!=null}">
+                            <c:if test="${error==2}">
+                                <p><strong style="color: red">Usuario y/o contraseña incorrectos</strong></p>
+                            </c:if>
+                        </c:if>
+                    </center> 
+                    <form name="main" action="Login?accion=login" method="POST">
+                        <table class="login">
+                            <tr><td>Usuario</td></tr>
+                            <tr><td><input type="text" name="txtUsuario" /></td></tr>
+                            <tr><td>Contraseña</td></tr>
+                            <tr><td><input type="password" name="txtClave"></td></tr>
+                            <tr><td>
+                                    <div class="buttons">
+                                        <input id="button" type="submit" value="Entrar" name="btnEntrar"/> <br> 
+                                        <a href="Usuarios?accion=insertar" id="Res"> Registrarse </a>
+                                    </div>
+                                </td></tr>
+                        </table>
+                    </form>
+                    <br/><br/><br/><br/>
+                    <hr/>
+                </article>  
             </div>
-            </div>
+        </div>
     </body>
 </html>

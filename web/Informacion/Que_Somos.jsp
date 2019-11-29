@@ -7,6 +7,6 @@
     placer de los aeropuertos. TRIC ofrece tarifas de alquiler 
     asequibles y una experiencia sencilla como cliente a los destinos 
     de viaje más populares en Estados Unidos, Canadá, México, el Caribe, Hispanoamérica y Asia.</h2>
-    <br/>
-    <br/>
+<br/>
+<br/>
 <%@include file = "../_down.jsp" %>

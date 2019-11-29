@@ -3,14 +3,14 @@
 <html>
     <head>
         <title>TRIC</title>
-        <link rel="stylesheet" type="text/css" href="../css/index.css" />
-        <link rel="stylesheet" href="css/tabla.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="css/main.css" type="text/css" />
     </head>
     <body>
         <div id="header">
             <div class="col-12 col-t-12 flex-contenedor" >
                 <div class="col-3 col-t-4 ">
-                    <img src="../img/logo.png"  alt="mi imagen">
+                    <img src="img/logo.png"  alt="mi imagen">
                 </div>
                 <br>
                 <div class="col-6 col-t-4 item-texto">
@@ -22,7 +22,7 @@
             <hr/>
             <h2>Registrate.</h2>
             <br/>
-            <form name="resgistro" action="Usuarios?accion=insertar">
+            <form name="resgistro" action="Usuarios" method="POST">
                 <table id="table">
                     <tr>
                         <th>  </th>
@@ -46,7 +46,7 @@
                     </tr>
                     <tr>
                         <td> Telefono: </td>
-                        <td> <input type="text" name="txtCorreo" size="35"> </td>
+                        <td> <input type="text" name="txtTelefono" size="35"> </td>
                     </tr>
                     <tr>
                         <td> Contraseña: </td>
@@ -54,6 +54,8 @@
                     </tr>
                 </table>
                 <br/>
-                <input type="submit" name="btnEnviar" id="button">
+                <input type="submit" name="btnEnviar" id="button" value="Resgistrarse">
+                <br/>
+                <a href="${pageContext.servletContext.contextPath}/Login" id="Res"> Cancelar </a>
             </form>
         </div>

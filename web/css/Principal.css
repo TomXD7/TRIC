@@ -13,14 +13,53 @@
     font-family: Mangostana;
     src: url('../fonts/Mangostana.ttf')
 }
-html body{font-family: Violana;font-size: 12px;}
-h2, h3, h4, h5, h6{font-family: Violana; color: white;}
-h1 {font-size:80px;padding: 30px 0px 0px;font-weight: normal; color:white; font-family: Mangostana;}
-h2 {font-size:40px;padding: 30px 0px 0px; text-align: center; font-weight: normal; }
-.login {margin: 0 auto; }
-.login td{padding: 5px 0px; display: flex; align-content: center; justify-content: center;}
-#header >h1{margin-left: 0px;padding-top: 110px;}
-#content >h1{text-align: center} 
+.fondito{
+    background-color: rgba(160, 217, 231, 0.534);
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+    width: auto;
+    height: auto;
+}
+.contenedor img{
+    width: 250px;
+    height: 150px;
+    margin: auto;
+    display: block;
+}
+
+.ima{
+    text-decoration: none;
+    display: block;
+    width: 100px;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+}
+.ima:hover{
+    box-shadow: 0 3px 10px rgb(134, 200, 226);
+}
+.ima{
+    text-decoration: none;
+    display: block;
+    width: 100px;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+}
+.ima:hover{
+    box-shadow: 0 3px 10px rgb(26, 17, 158);
+}
+.fontt {
+    font-family: myfont;
+    font-size: 20px;
+}
+.fuente2 {
+    font-family: mifuente2;
+    font-size: 20px;
+}
 .flex-contenedor{
     display: flex;
     flex-wrap: wrap;
@@ -47,8 +86,9 @@ article{
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between; 
+    height: 300px;
+    width: 400px;
 }
-
 .item-texto{
     display: flex;
     flex-direction: column;
@@ -85,21 +125,14 @@ h3{
     padding-bottom: 10px;
     padding-top: 10px;
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     font-size: 18px;
     margin: 1px;
 
 }
-.caja{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #85C1E9;
-    padding: 15px;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 5px;
-}
 .fondo2{
+    background: url(../IMAGENES/g1.jpg) no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -109,17 +142,6 @@ h3{
     position: relative;
     margin: auto;
 }
-/*color para el fondo*/
-body{
-    background-color: #154360;
-}  
-
-.row label {
-    color: white;
-}
-.row legend{
-    color: white;
-}
 .fondotxt{
     padding: 30px;
     background-color: rgb(255, 255, 255);
@@ -128,6 +150,27 @@ body{
 p{
     margin: 5px;
 }
+.bo{
+    margin-top: 10px;
+    line-height: 5px;
+    padding: 6px;
+    text-align: center;
+    background-color: rgba(36, 45, 170, 0.527);
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+    justify-content: center;
+    border: 1px solid rgb(82, 70, 240);
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+}
+.bo:hover{
+    background-color: rgba(41, 79, 248, 0.979);
+    /*color: dodgerblue;*/
+    box-shadow: 0 3px 5px black;
+}
+
 /* menu*/
 .nav{
     display: flex;
@@ -146,76 +189,15 @@ p{
 .nav a:hover{
     background-color:rgb(49, 52, 219);
 }
+.color{
+    background-color: black;
+    
+}
 .nav>a>div.desplegable{
     position: absolute;
     top: 100%;
     left: 0;
 }
-.row::after{
-    content: "";
-    clear: both;
-    display: table;
-}
-button{
-    margin-top: 100px;
-    line-height: 30px;
-    padding: 6px;
-    background-color: rgba(255, 255, 255, 0.527);
-    color: white;
-    border-radius: 10px;
-    text-decoration: none;
-    border: 2px solid rgb(73, 70, 240);
-    display: block;
-    width: 100px;
-    text-align: center;
-    margin: auto;
-    cursor: pointer;   
-}
-button a{
-    color: white;
-    text-decoration: none;
-}
-
-nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-nav ul li  {
-    display: inline;
-    width: 100%;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    font-size: 18px;
-    margin: 1px;
-}
-.caja{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 15px;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 5px;
-}
-.row label {
-    color: white;
-}
-.row legend{
-    color: white;
-}
-.row::after{
-    content: "";
-    clear: both;
-    display: table;
-}
-.fboton{
-    display: flex;
-    justify-content: center;
-}
-
 [class*="col-"]{
     width: 100%;
 }
@@ -242,7 +224,7 @@ nav ul li  {
         font-size: 20px;
 
     }
-    button{
+    #button{
         width: 20%;
     }
     .flex-contenedor{
@@ -251,15 +233,14 @@ nav ul li  {
     .fondo2{
         flex-direction: row;
     }
-    .row::after{
-    content: "";
-    clear: both;
-    display: table;
 }
+[class*="col-"]{
+    float: left;
+    padding: 15px;
 }
 
 @media only screen and (min-width:768px){
-    /*para moviles*/
+    /*para mobiles*/
     .col-1{ width: 8.33%;}
     .col-2{ width: 16.66%;}
     .col-3{ width: 25%;}
@@ -284,50 +265,23 @@ nav ul li  {
     }
     .fondo2{
         flex-direction: row;
-    } 
+    }
 }
-
-[class*="col-"]{
-    float: left;
-    padding: 15px;
-}
-
 .row::after{
     content: "";
     clear: both;
     display: table;
 }
+
 #button{
-    width: 100px;
-    display: block;
-    border-radius: 7px;
-    margin: 0 auto;
-    padding: 5px;
-    font-family: Violana;
-    text-align: center;
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 3px solid #2874A6;
-    border-top: 3px solid #2874A6;
-    background-color: white;
-    cursor: pointer;   
-}
-#Res{
-    width: 100px;
-    display: block;
-    border-radius: 7px;
-    margin: 0 auto;
-    padding: 5px;
-    font-family: Violana;
-    font-size: 14px;
-    text-align: center;
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 3px solid #2874A6;
-    border-top: 3px solid #2874A6;
-    background-color: white;
+    padding: 10px;
+    font-weight: 300;
+    font-size: 15px;
+    width: 70%;
+    background-color: green;
+    color: white;
     cursor: pointer;
-    color: black;
+    border:0;
 }
 nav ul{
     list-style-type: none;
@@ -346,6 +300,9 @@ nav ul li {
     font-size: 18px;
     margin: 1px;
 }
+body{
+    background-color: #A9CCE3;
+}
 .caja{
     display: flex;
     flex-wrap: wrap;
@@ -356,10 +313,4 @@ nav ul li {
 .fboton{
     display: flex;
     justify-content: center;
-}
-footer p{
-    padding: 10px;
-    background-color: dodgerblue;
-    text-align: center;
-    color: white;
 }
