@@ -44,6 +44,8 @@ public class Principal extends HttpServlet {
                 request.getRequestDispatcher("Informacion/Ofrecemos.jsp").forward(request, response);
         }else if(acccion.equals("5")){
                 request.getRequestDispatcher("Informacion/Que_Somos.jsp").forward(request, response);
+        }else if(acccion.equals("6")){
+            request.getRequestDispatcher("Mantenimiento/Mantenimiento.jsp").forward(request, response);
         }
     }
 

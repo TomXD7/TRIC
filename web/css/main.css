@@ -43,7 +43,7 @@ h1 {font-size:20px;padding: 30px 0px 0px;font-weight: bold}
     margin-top: 25px
 }
 #sesion{
-
+    
 }
 
 #sesion h2{
@@ -139,6 +139,23 @@ h1 {font-size:20px;padding: 30px 0px 0px;font-weight: bold}
 #content .buttons{
     display: flex;
 }    
+#Res{
+    width: 100px;
+    display: block;
+    border-radius: 7px;
+    margin: 0 auto;
+    padding: 5px;
+    font-family: Violana;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 3px solid #2874A6;
+    border-top: 3px solid #2874A6;
+    background-color: white;
+    cursor: pointer;
+    color: black;
+}
 #content .buttons ul{
     list-style-type: none;
 }

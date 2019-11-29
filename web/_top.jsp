@@ -46,8 +46,8 @@
         </div>
         <div id="sesion">
             <h2>Usuario: ${User.nombres} ${User.apellidos}
-                <strong>[${User.idusuario}]</strong> |
-                <a href="Principal?accion=logout">Cerrar Sesión</a>
+                <strong>[${User.idusuario}]</strong>
+                <a href="Principal?accion=logout" id="Res">Cerrar Sesión</a>
             </h2>
         </div>
         <div id="menu">
