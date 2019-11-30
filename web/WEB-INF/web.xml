@@ -20,6 +20,10 @@
         <servlet-name>Usuarios</servlet-name>
         <servlet-class>com.tric.control.Usuarios</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Reservacion</servlet-name>
+        <servlet-class>com.tric.control.Reservacion</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Principal</servlet-name>
         <url-pattern>/Principal</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>Usuarios</servlet-name>
         <url-pattern>/Usuarios</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Reservacion</servlet-name>
+        <url-pattern>/Reservacion</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
