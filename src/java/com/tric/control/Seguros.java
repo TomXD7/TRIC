@@ -20,6 +20,8 @@ public class Seguros extends HttpServlet {
             }
         }else if(accion.equals("9")){
             request.getRequestDispatcher("Seguros/consulta_seguros.jsp").forward(request, response);
+        }else if(accion.equals("insertar")){
+            request.getRequestDispatcher("Seguros/insertar_modificar.jsp").forward(request, response);
         }
     }
 
