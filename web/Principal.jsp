@@ -1,11 +1,4 @@
-<link rel="stylesheet" type="text/css" href="../css/Principal.css" />
-<body>
 <%@include file = "_top.jsp" %>
-<ul id="opciones">
-    <c:forEach var="opcion" items="${PermisosAsignados}">
-        <li><a href="${pageContext.servletContext.contextPath}${opcion.url}?op=${opcion.idmenu}">${opcion.menu}</a></li>    
-        </c:forEach>
-</ul>
 <div class="contenedor ">
     <div class="fondito row">
         <main class="col-12 col-t-12">
@@ -75,4 +68,3 @@
     </div>
 </div>  
 <%@include file = "_down.jsp" %>
-</body>

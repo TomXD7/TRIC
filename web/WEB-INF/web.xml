@@ -16,6 +16,26 @@
         <servlet-name>Login</servlet-name>
         <servlet-class>com.tric.control.Login</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Usuarios</servlet-name>
+        <servlet-class>com.tric.control.Usuarios</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Vehiculos</servlet-name>
+        <servlet-class>com.tric.control.Vehiculos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Reservaciones</servlet-name>
+        <servlet-class>com.tric.control.Reservacion</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Mejoras</servlet-name>
+        <servlet-class>com.tric.control.Mejoras</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Seguros</servlet-name>
+        <servlet-class>com.tric.control.Seguros</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Principal</servlet-name>
         <url-pattern>/Principal</url-pattern>
@@ -23,6 +43,26 @@
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Usuarios</servlet-name>
+        <url-pattern>/Usuarios</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Vehiculos</servlet-name>
+        <url-pattern>/Vehiculos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Reservaciones</servlet-name>
+        <url-pattern>/Reservaciones</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Mejoras</servlet-name>
+        <url-pattern>/Mejoras</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Seguros</servlet-name>
+        <url-pattern>/Seguros</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

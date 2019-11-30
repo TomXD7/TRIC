@@ -3,13 +3,12 @@
     <hr/>
     <br/>
     <p>
-        <a href="">Inicio</a> |
-        <a href="">Reservaciones</a> |
-        <a href="">Ofrecemos</a> |
-        <a href="">Que Somos</a> |
-    </p>
-    <br/>
-    <p>&copy; Copyright 2019 | Design by: DSW | Developed by: DSW </p>
+    <c:forEach var="menu" items="${MenuPrincipal}">
+        <a href="${pageContext.servletContext.contextPath}${menu.url}?accion=${menu.idmenu}">${menu.menu}</a> |
+    </c:forEach>
+</p>
+<br/>
+<p>&copy; Copyright 2019 | Design by: DSW | Developed by: DSW </p>
 </div>
 </body>
 </html>

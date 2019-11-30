@@ -194,10 +194,6 @@ p{
 .nav a:hover{
     background-color:rgb(49, 52, 219);
 }
-.color{
-    background-color: black;
-    
-}
 .nav>a>div.desplegable{
     position: absolute;
     top: 100%;

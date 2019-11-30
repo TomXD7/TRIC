@@ -1,3 +1,4 @@
+
 package com.tric.entidades;
 import com.tric.anotaciones.*;
 @Entity (table = "vehiculo")

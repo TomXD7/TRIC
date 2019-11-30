@@ -50,7 +50,7 @@ p{
     margin-top: 25px
 }
 #sesion{
-
+    
 }
 
 #sesion h2{
@@ -128,24 +128,41 @@ p{
 }
 #content #table{
     width: 95%;
-    margin: 5px 0px    
+    margin: 5px 0px;    
 }
 #content #table thead{  
     font-weight: bold;
     text-align: center;    
 }
 #content #table tbody{
-    
-
+    font-size: 20px;
 }
 #content #table tbody td{
     padding: 2px;
     border-bottom: 1px solid #E3E3E3;
     text-align: center;
+    color: white;
 }
 #content .buttons{
     display: flex;
 }    
+#Res{
+    width: 100px;
+    display: block;
+    border-radius: 7px;
+    margin: 0 auto;
+    padding: 5px;
+    font-family: Violana;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 3px solid #2874A6;
+    border-top: 3px solid #2874A6;
+    background-color: white;
+    cursor: pointer;
+    color: black;
+}
 #content .buttons ul{
     list-style-type: none;
 }
