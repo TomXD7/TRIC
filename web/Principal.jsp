@@ -5,7 +5,6 @@
             <section class="row">
                 <article class="col-4 col-t-6  ima">
                     <img src="img/g4.jpg"  alt="mi imagen">
-                    <br>
                     <a>Fullsize</a><br>  
                     <a><i class="icon icon-travel-car">2/4</i></a><br>
                     <a><i class="icon icon-user">5</i></a><br>

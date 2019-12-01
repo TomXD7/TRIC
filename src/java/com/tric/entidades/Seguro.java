@@ -1,18 +1,19 @@
 package com.tric.entidades;
 import com.tric.anotaciones.*;
+import java.math.BigDecimal;
 @Entity (table = "seguro")
 public class Seguro {
     @PrimaryKey
     @AutoIncrement
     private Integer idseguro;
     private String nombre;
-    private double precio;
+    private BigDecimal precio;
     private String detalle_servicio;
 
     public Seguro() {
     }
 
-    public Seguro(Integer idseguro, String nombre, double precio, String detalle_servicio) {
+    public Seguro(Integer idseguro, String nombre, BigDecimal precio, String detalle_servicio) {
         this.idseguro = idseguro;
         this.nombre = nombre;
         this.precio = precio;
@@ -27,7 +28,7 @@ public class Seguro {
         return nombre;
     }
 
-    public double getPrecio() {
+    public BigDecimal getPrecio() {
         return precio;
     }
 
@@ -43,7 +44,7 @@ public class Seguro {
         this.nombre = nombre;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(BigDecimal precio) {
         this.precio = precio;
     }
 

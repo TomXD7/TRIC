@@ -14,25 +14,24 @@
                 </div>
                 <br>
                 <div class="col-6 col-t-4 item-texto">
-                    <h1>TRIC Rent a Car </h1>
+                    <img src="img/text.png" style="width:400px;"  alt="mi imagen">
                 </div> 
             </div>  
         </div>
         <div id="content">
             <hr/>
-            <h2>Registrate.</h2>
+            <h2> Registrate.</h2>
             <br/>
             <form name="resgistro" action="Usuarios" method="POST">
                 <table id="table">
                     <tr>
                         <th>  </th>
                         <th>  </th>
-                        
                     </tr>
-                    <tr>
-                        <td> Usuario: </td>
-                        <td><input type="text" name="txtUsuario" size="35"></td>
-                    </tr>
+                    <br>
+                    <td> Usuario: </td>
+                    <td><input type="text" name="txtUsuario" size="35"></td>
+                    <br>
                     <tr>
                         <td> Nombre: </td>
                         <td><input type="text" name="txtNombre" size="35"></td>
