@@ -99,6 +99,7 @@ public class Mejoras extends HttpServlet {
                     Logger.getLogger(Mejoras.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
+            request.getRequestDispatcher("Mejora/consulta_mejora.jsp").forward(request, response);
         } else if (accion.equals("8")) {
             request.getRequestDispatcher("Mejora/consulta_mejora.jsp").forward(request, response);
         } else if (accion.equals("insertar")) {

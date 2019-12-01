@@ -1,12 +1,12 @@
 
 package com.tric.entidades;
 import com.tric.anotaciones.*;
+import java.math.BigDecimal;
 @Entity (table = "vehiculo")
 public class Vehiculo {
     @PrimaryKey
     @AutoIncrement
     private Integer idvehiculo;
-    private Integer idtipovehiculo;
     @NotNull
     private String modelo;
     private Integer numero_pasajeros;
@@ -15,16 +15,15 @@ public class Vehiculo {
     @NotNull
     private String placa;
     @NotNull
-    private double precio;
+    private BigDecimal precio;
     @NotNull
     private String marca;
 
     public Vehiculo() {
     }
 
-    public Vehiculo(Integer idvehiculo, Integer idtipovehiculo, String modelo, Integer numero_pasajeros, String color, String placa, double precio, String marca) {
+    public Vehiculo(Integer idvehiculo, String modelo, Integer numero_pasajeros, String color, String placa, BigDecimal precio, String marca) {
         this.idvehiculo = idvehiculo;
-        this.idtipovehiculo = idtipovehiculo;
         this.modelo = modelo;
         this.numero_pasajeros = numero_pasajeros;
         this.color = color;
@@ -35,10 +34,6 @@ public class Vehiculo {
 
     public Integer getIdvehiculo() {
         return idvehiculo;
-    }
-
-    public Integer getIdtipovehiculo() {
-        return idtipovehiculo;
     }
 
     public String getModelo() {
@@ -57,7 +52,7 @@ public class Vehiculo {
         return placa;
     }
 
-    public double getPrecio() {
+    public BigDecimal getPrecio() {
         return precio;
     }
 
@@ -67,10 +62,6 @@ public class Vehiculo {
 
     public void setIdvehiculo(Integer idvehiculo) {
         this.idvehiculo = idvehiculo;
-    }
-
-    public void setIdtipovehiculo(Integer idtipovehiculo) {
-        this.idtipovehiculo = idtipovehiculo;
     }
 
     public void setModelo(String modelo) {
@@ -89,7 +80,7 @@ public class Vehiculo {
         this.placa = placa;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(BigDecimal precio) {
         this.precio = precio;
     }
 

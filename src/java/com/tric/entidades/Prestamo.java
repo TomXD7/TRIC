@@ -7,8 +7,6 @@ public class Prestamo {
     @AutoIncrement
     private Integer idprestamo;
     @NotNull
-    private String reserva; //convertir a date
-    @NotNull
     private Timestamp fecha_inicio; //convertir a date
     @NotNull
     private Timestamp fecha_fin; //convertir a date
@@ -20,9 +18,8 @@ public class Prestamo {
     public Prestamo() {
     }
 
-    public Prestamo(Integer idprestamo, String reserva, Timestamp fecha_inicio, Timestamp fecha_fin, String idcliente, Integer idvehiculo, Integer idmejora, Integer idproducto) {
+    public Prestamo(Integer idprestamo, Timestamp fecha_inicio, Timestamp fecha_fin, String idcliente, Integer idvehiculo, Integer idmejora, Integer idproducto) {
         this.idprestamo = idprestamo;
-        this.reserva = reserva;
         this.fecha_inicio = fecha_inicio;
         this.fecha_fin = fecha_fin;
         this.idcliente = idcliente;
@@ -33,10 +30,6 @@ public class Prestamo {
 
     public Integer getIdprestamo() {
         return idprestamo;
-    }
-
-    public String getReserva() {
-        return reserva;
     }
 
     public Timestamp getFecha_inicio() {
@@ -66,10 +59,6 @@ public class Prestamo {
 
     public void setIdprestamo(Integer idprestamo) {
         this.idprestamo = idprestamo;
-    }
-
-    public void setReserva(String reserva) {
-        this.reserva = reserva;
     }
 
     public void setFecha_inicio(Timestamp fecha_inicio) {

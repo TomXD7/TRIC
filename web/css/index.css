@@ -72,10 +72,10 @@ article{
     height: 275px;
 
 }
-/*.fondo{
+.fondo{
     background-color: lightgray;
     height: 250px;
-}*/
+}
 .caja{
     margin: auto;
 }
@@ -109,7 +109,7 @@ h3{
     position: relative;
     margin: auto;
 }
-/*color para el fondo*/
+color para el fondo
 body{
     background-color: #154360;
 }  
@@ -128,7 +128,7 @@ body{
 p{
     margin: 5px;
 }
-/* menu*/
+ menu
 .nav{
     display: flex;
     flex-direction: column;
@@ -221,7 +221,7 @@ nav ul li  {
 }
 
 @media only screen and (min-width:600px){
-    /*para tablets*/
+    para tablets
     .col-t-1{ width: 8.33%;}
     .col-t-2{ width: 16.66%;}
     .col-t-3{ width: 25%;}
@@ -259,7 +259,7 @@ nav ul li  {
 }
 
 @media only screen and (min-width:768px){
-    /*para moviles*/
+    para moviles
     .col-1{ width: 8.33%;}
     .col-2{ width: 16.66%;}
     .col-3{ width: 25%;}

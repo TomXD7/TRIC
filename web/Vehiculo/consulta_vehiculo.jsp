@@ -8,16 +8,16 @@
         <p style="color:darkred"><strong>La operación no se realizó.</strong></p>
     </c:if>
 </c:if>
-<h2>Listado de Mejoras</h2><br>
+<h2>Listado de Vehiculos</h2><br>
 <div class="busqueda" style="width: 50%; text-align: right">
-    <form action="${pageContext.servletContext.contextPath}/Mejoras" method="get">
-        <input type="text" name="txtBusqueda" id="txtBusqueda" value="${valor}"/>
+    <form action="${pageContext.servletContext.contextPath}/Vehiculos" method="get">
+        <input type="text" name="txtBusqueda" id="txtBusqueda" value="${valor}" />
         <input type="submit" value="Buscar"/>
     </form>
 </div>
 <div class="buttons">
     <ul>
-        <li><a href="${pageContext.servletContext.contextPath}/Mejoras?accion=insertar" id="Res">Nuevo</a></li>
+        <li><a href="${pageContext.servletContext.contextPath}/Vehiculos?accion=insertar" id="Res">Nuevo</a></li>
     </ul>
 </div>
 <br/>
