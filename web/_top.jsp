@@ -24,6 +24,8 @@
         <link rel="stylesheet" type="text/css" href="css/Principal.css"/>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <script src="https://kit.fontawesome.com/2c3cae7245.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="css/datetimepicker.css"/> 
+        <script type="text/javascript" src="js/datetimepicker.js"></script> 
     </head>
     <body>
         <div id="header">
