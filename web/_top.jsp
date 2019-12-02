@@ -23,8 +23,7 @@
         <link rel="stylesheet" href="css/tabla.css" type="text/css" />
         <link rel="stylesheet" type="text/css" href="css/Principal.css"/>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-         <link rel="stylesheet" type="text/css" href="css/Mantenimiento.css" />
-        
+        <link rel="stylesheet" type="text/css" href="css/insertar_modificar.css" />
         <script src="https://kit.fontawesome.com/2c3cae7245.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -37,11 +36,11 @@
                     <br>
                     <div class="col-1 col-t-4 item-texto">
                         <img src="img/text.png" style="width:400px;"  alt="mi imagen">
-                        <br/>
-                        <p>tricrentacar@gmail.com</p>
-                        <br/>
-                        <p>(+503)75682363: WhatsApp</p>
-                        <br>
+                        <!--                        <br/>
+                                                <p>tricrentacar@gmail.com</p>
+                                                <br/>
+                                                <p>(+503)75682363: WhatsApp</p>
+                                                <br>-->
                     </div> 
                 </div>
             </div>

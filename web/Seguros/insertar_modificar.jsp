@@ -1,5 +1,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@include file = "../_top.jsp" %>
+<link rel="stylesheet" type="text/css" href="../css/insertar_modificar.css" />
+
 <h2>Seguros</h2>
 <br/>
 <form name="form_seguro" onsubmit="return validar();"
@@ -30,7 +32,7 @@
         </tbody>
     </table>
     <br/>
-    <div class="buttons">
+    <div class="buttons" >
         <ul>
             <li><input type="submit" value="Guardar" name="guardar" id="Res"/></li>
             <li><a href="#" onclick="javascript: return window.history.back()" id="Res">Regresar</a></li>
