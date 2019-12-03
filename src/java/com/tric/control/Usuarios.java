@@ -31,8 +31,11 @@ public class Usuarios extends HttpServlet {
             }
         } else if (accion.equals("insertar")) {
             request.getRequestDispatcher("Usuario/registro_usuario.jsp").forward(request, response);
+        }else if(accion.equals("10")){
+            request.getRequestDispatcher("Usuario/registro_usuario.jsp").forward(request, response);
         }
     }
+    
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

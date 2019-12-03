@@ -99,6 +99,7 @@ public class Seguros extends HttpServlet {
                     Logger.getLogger(Seguros.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
+            request.getRequestDispatcher("Seguros/consulta_seguros.jsp").forward(request, response);
         } else if (accion.equals("9")) {
             request.getRequestDispatcher("Seguros/consulta_seguros.jsp").forward(request, response);
         } else if (accion.equals("insertar")) {

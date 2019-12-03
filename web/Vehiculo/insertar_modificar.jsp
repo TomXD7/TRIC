@@ -16,28 +16,32 @@
                 <td><input type="text" name="txtIdvehiculo" value="${vehiculo.idvehiculo}" readonly="readonly" /></td>
             </tr>
             <tr>
-                <td>Modelo</td>
-                <td><input type="text" name="txtModelo" id="txtModelo" value="${vehiculo.modelo}" /></td>
-            </tr>
-            <tr>
                 <td>Numero de pasajeros</td>
-                <td><input type="text" name="txtPasajeros" id="txtPasajeros" value="${vehiculo.numero_pasajeros}" /></td>
-            </tr>
-            <tr>
-                <td>Color</td>
-                <td><input type="text" name="txtColor" id="txtColor" value="${vehiculo.color}"/></td>
+                <td><input type="number" name="txtPasajeros" id="txtPasajeros" value="${vehiculo.numero_pasajeros}" /></td>
             </tr>
             <tr>
                 <td>Placa</td>
-                <td><input type="text" name="txtPlaca" id="txtPlaca" value="${vehiculo.placa}" /></td>
-            </tr>
-            <tr>
-                <td>Precio</td>
-                <td><input type="text" name="txtPrecio" id="txtPrecio" value="${vehiculo.precio}" /></td>
+                <td><input type="text" name="txtPlaca" id="txtPlaca" value="${vehiculo.placa}"/></td>
             </tr>
             <tr>
                 <td>Marca</td>
-                <td><input type="text" name="txtMarca" id="txtMarca" value="${vehiculo.marca}" /></td>
+                <td>
+                    <input type="text" name="txtMarca" id="txtMarca" value="${vehiculo.marca}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Tipo</td>
+                <td>
+                    <input type="text" name="txtTipo" id="txtTipo" value="${vehiculo.tipo}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Descripcion</td>
+                <td><textarea name="txtDescripcion" id="txtDescripcion" rows="7" cols="22">${vehiculo.descripcion}</textarea></td>
+            </tr>
+            <tr>
+                <td>Precio</td>
+                <td><input type="number" step="0.01" name="txtPrecio" id="txtPrecio" value="${vehiculo.precio}"/></td>
             </tr>
         </tbody>
     </table>

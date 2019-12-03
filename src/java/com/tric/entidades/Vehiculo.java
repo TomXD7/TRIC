@@ -8,84 +8,86 @@ public class Vehiculo {
     @AutoIncrement
     private Integer idvehiculo;
     @NotNull
-    private String modelo;
     private Integer numero_pasajeros;
-    @NotNull
-    private String color;
     @NotNull
     private String placa;
     @NotNull
-    private BigDecimal precio;
-    @NotNull
     private String marca;
+    @NotNull
+    private String tipo;
+    @NotNull
+    private String descripcion;
+    @NotNull
+    private BigDecimal precio;
 
     public Vehiculo() {
     }
 
-    public Vehiculo(Integer idvehiculo, String modelo, Integer numero_pasajeros, String color, String placa, BigDecimal precio, String marca) {
+    public Vehiculo(Integer idvehiculo, Integer numero_pasajeros, String placa, String marca, String tipo, String descripcion, BigDecimal precio) {
         this.idvehiculo = idvehiculo;
-        this.modelo = modelo;
         this.numero_pasajeros = numero_pasajeros;
-        this.color = color;
         this.placa = placa;
-        this.precio = precio;
         this.marca = marca;
+        this.tipo = tipo;
+        this.descripcion = descripcion;
+        this.precio = precio;
     }
 
     public Integer getIdvehiculo() {
         return idvehiculo;
     }
 
-    public String getModelo() {
-        return modelo;
+    public void setIdvehiculo(Integer idvehiculo) {
+        this.idvehiculo = idvehiculo;
     }
 
     public Integer getNumero_pasajeros() {
         return numero_pasajeros;
     }
 
-    public String getColor() {
-        return color;
+    public void setNumero_pasajeros(Integer numero_pasajeros) {
+        this.numero_pasajeros = numero_pasajeros;
     }
 
     public String getPlaca() {
         return placa;
     }
 
-    public BigDecimal getPrecio() {
-        return precio;
+    public void setPlaca(String placa) {
+        this.placa = placa;
     }
 
     public String getMarca() {
         return marca;
     }
 
-    public void setIdvehiculo(Integer idvehiculo) {
-        this.idvehiculo = idvehiculo;
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setNumero_pasajeros(Integer numero_pasajeros) {
-        this.numero_pasajeros = numero_pasajeros;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setPlaca(String placa) {
-        this.placa = placa;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public BigDecimal getPrecio() {
+        return precio;
     }
 
     public void setPrecio(BigDecimal precio) {
         this.precio = precio;
     }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
+    
     
 }

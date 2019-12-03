@@ -56,6 +56,6 @@
                 <br/>
                 <input type="submit" name="btnEnviar" id="button" value="Resgistrarse">
                 <br/>
-                <a href="${pageContext.servletContext.contextPath}/Login" id="Res"> Cancelar </a>
+                <a href="#" onclick="javascript: return window.history.back()" id="Res">Regresar</a>
             </form>
         </div>

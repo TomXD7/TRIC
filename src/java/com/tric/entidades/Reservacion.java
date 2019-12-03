@@ -1,5 +1,6 @@
 package com.tric.entidades;
 import com.tric.anotaciones.*;
+import java.math.BigDecimal;
     import java.sql.Timestamp;
 @Entity (table = "reservacion")
 public class Reservacion {
@@ -12,6 +13,7 @@ public class Reservacion {
     private Timestamp fecha_fin;
     @NotNull
     private String agencia;
+    private BigDecimal total;
     private String idusuario;
     private Integer idvehiculo;
     private Integer idmejora;
@@ -20,11 +22,12 @@ public class Reservacion {
     public Reservacion() {
     }
 
-    public Reservacion(Integer idreservacion, Timestamp fecha_inicio, Timestamp fecha_fin, String agencia, String idusuario, Integer idvehiculo, Integer idmejora, Integer idproducto) {
+    public Reservacion(Integer idreservacion, Timestamp fecha_inicio, Timestamp fecha_fin, String agencia, BigDecimal total, String idusuario, Integer idvehiculo, Integer idmejora, Integer idproducto) {
         this.idreservacion = idreservacion;
         this.fecha_inicio = fecha_inicio;
         this.fecha_fin = fecha_fin;
         this.agencia = agencia;
+        this.total = total;
         this.idusuario = idusuario;
         this.idvehiculo = idvehiculo;
         this.idmejora = idmejora;
@@ -63,6 +66,14 @@ public class Reservacion {
         this.agencia = agencia;
     }
 
+    public BigDecimal getTotal() {
+        return total;
+    }
+
+    public void setTotal(BigDecimal total) {
+        this.total = total;
+    }
+
     public String getIdusuario() {
         return idusuario;
     }
@@ -96,5 +107,4 @@ public class Reservacion {
     }
     
     
-
 }

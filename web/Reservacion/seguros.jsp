@@ -27,7 +27,7 @@
             ////asigna a las cajas de texto de la ventana padre los valores             
             ////obtenidos             
             var precio = row.cells[2].childNodes[0].innerHTML;
-            window.opener.setDataMejora(idseguro, seguro, precio);             
+            window.opener.setDataSeguro(idseguro, seguro, precio);             
             ////cierra la ventana             
             window.close();         
             }            

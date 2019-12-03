@@ -42,7 +42,7 @@ public class Reservaciones extends HttpServlet {
 
                 String sql = "";
                 if (request.getParameter("txtBusqueda") != null) {
-                    sql = "select * from reservcion where nombre like ?";
+                    sql = "select * from reservcion where idusuario like ?";
                 } else {
                     sql = "select * from reservacion";
                 }
@@ -272,17 +272,17 @@ public class Reservaciones extends HttpServlet {
                               conn.conectar();               
              Operaciones.abrirConexion(conn);               
              Operaciones.iniciarTransaccion();                     
-             String sql = "select idvehiculo, modelo, numero_pasajeros, color, placa, precio, marca from vehiculo;";    
+             String sql = "select idvehiculo, numero_pasajeros, placa, marca, tipo, descripcion, precio from vehiculo";    
              String[][] origenes = Operaciones.consultar(sql, null);          
              //declaracion de cabeceras a usar en la tabla HTML            
              String[] cabeceras = new String[]{               
-                 "Id Vehiculo",               
-                 "Modelo",               
+                 "Id Vehiculo",                          
                  "Numero de pasajeros",
-                 "Color",
                  "Placa",
+                 "Marca",
+                 "Tipo",
+                 "Descripcion",
                  "Precio",
-                 "Marca"
                       };             
              //variable de tipo Tabla para generar la Tabla HTML    
              Tabla tab = new Tabla(origenes, //array que contiene los datos       
@@ -336,8 +336,11 @@ public class Reservaciones extends HttpServlet {
                     Timestamp fechainicio = new Timestamp(fi.getTime());
                     Date fu = new SimpleDateFormat("dd/mm/yyyy").parse(request.getParameter("txtFechaFin"));
                     Timestamp fechafin = new Timestamp(fu.getTime());
-                    
                     String agencia = request.getParameter("txtAgencia");
+                    int dias=(int) ((fechafin.getTime()-fechainicio.getTime())/86400000);
+                    BigDecimal d = new BigDecimal(dias);
+                    BigDecimal total = new BigDecimal(request.getParameter("txtTotal"));
+                    total = total.multiply(d);
                     String idvehiculo = request.getParameter("txtVehiculo");
                     String idmejora = request.getParameter("txtMejora");
                     String idseguro = request.getParameter("txtSeguro");
@@ -347,7 +350,7 @@ public class Reservaciones extends HttpServlet {
                         Operaciones.abrirConexion(conn);
                         Operaciones.iniciarTransaccion();
                         if (idreservacion != null && !idreservacion.equals("")) {
-                            Reservacion r = new Reservacion(Integer.parseInt(idreservacion), fechainicio, fechafin, agencia, "", Integer.parseInt(idvehiculo), Integer.parseInt(idmejora), Integer.parseInt(idseguro));
+                            Reservacion r = new Reservacion(Integer.parseInt(idreservacion), fechainicio, fechafin, agencia, total, "", Integer.parseInt(idvehiculo), Integer.parseInt(idmejora), Integer.parseInt(idseguro));
                             r = Operaciones.actualizar(r.getIdreservacion(), r);
                             if (r.getIdreservacion() != 0) {
                                 request.getSession().setAttribute("resultado", 1);
@@ -364,6 +367,7 @@ public class Reservaciones extends HttpServlet {
                             r.setIdvehiculo(Integer.parseInt(idvehiculo));
                             r.setIdmejora(Integer.parseInt(idmejora));
                             r.setIdproducto(Integer.parseInt(idseguro));
+                            r.setTotal(total);
                             r = Operaciones.insertar(r);
                             if (r.getIdreservacion() != 0) {
                                 request.getSession().setAttribute("resultado", 1);
@@ -377,7 +381,7 @@ public class Reservaciones extends HttpServlet {
                             Operaciones.rollback();
                             
                         } catch (SQLException ex1) {
-                            Logger.getLogger(Reservacion.class.getName()).log(Level.SEVERE, null, ex1);
+                            Logger.getLogger(Reservaciones.class.getName()).log(Level.SEVERE, null, ex1);
                         }
                         request.getSession().setAttribute("resultado", 2);
                         ex.printStackTrace();
@@ -386,13 +390,13 @@ public class Reservaciones extends HttpServlet {
                             Operaciones.cerrarConexion();
                             
                         } catch (SQLException ex) {
-                            Logger.getLogger(Reservacion.class.getName()).log(Level.SEVERE, null, ex);
+                            Logger.getLogger(Reservaciones.class.getName()).log(Level.SEVERE, null, ex);
                         }
                     }
-                    response.sendRedirect(request.getContextPath() + "/Reservacion");
+                    response.sendRedirect(request.getContextPath() + "/Reservaciones");
                     break;
                 } catch (ParseException ex) {
-                    Logger.getLogger(Reservacion.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(Reservaciones.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         }

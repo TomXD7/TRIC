@@ -41,6 +41,4 @@ public class MejoraPrestamo {
     public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
     }
-    
-    
 }

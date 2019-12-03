@@ -3,7 +3,8 @@
 <h1>Reservacion</h1>
 <br/>
 <link rel="stylesheet" type="text/css" href="css/index.css" />
-<script> function abrirVentana(URL) {
+<script>
+    function abrirVentana(URL) {
         //funcion javascript para abrir un subventana para realizar     
         //busquedas, se le pasa la pagina a mostrar como parametro     
         window.open(URL, "ventana1", "width=700,height=400,scrollbars=YES,statusbar=YES,top=150,left=30 0")
@@ -36,12 +37,14 @@
             </tr>
             <tr>
                 <td>Agencia</td>
-                <td><input type="text" name="txtAgencia" value="${reservacion.agencia}"  /></td>
+                <td>
+                    <input type="text" name="txtAgencia" id="txtAgencia" value="${vehiculo.agencia}"/>
+                </td>
                 <td></td>
             </tr>
             <tr>
                 <td>Vehiculo</td>
-                <td><input type="text" name="txtMejora" id="txtVehiculo" readonly="readonly"></td>
+                <td><input type="text" name="txtVehiculo" id="txtVehiculo" readonly="readonly"></td>
                 <td><input type="button" value="..." class="boton" onclick="abrirVentana('${pageContext.servletContext.contextPath}/Reservaciones?accion=vehiculos');"> </td>
             </tr>
             <tr>             
@@ -51,8 +54,13 @@
             </tr>
             <tr>
                 <td>Seguro</td>
-                <td><input type="text" name="txtMejora" id="txtSeguro" readonly="readonly"></td>
+                <td><input type="text" name="txtSeguro" id="txtSeguro" readonly="readonly"></td>
                 <td><input type="button" value="..." class="boton" onclick="abrirVentana('${pageContext.servletContext.contextPath}/Reservaciones?accion=seguros');"> </td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td><input type="text" name="txtTotal" value="${reservacion.total}" readonly="readonly" /></td>
+                <td></td>
             </tr>
         </tbody>
     </table>
@@ -76,6 +84,12 @@
     }
     function setDataMejora(idmejora, mejora, precio) {
         document.getElementById("txtMejora").value = mejora;
+    }
+    function setDataSeguro(idseguro, seguro, precio) {
+        document.getElementById("txtSeguro").value = seguro;
+    }
+    function setDataVehiculo(idvehiculo, numero_pasajeros, placa, marca, tipo, descripcion, precio) {
+        document.getElementById("txtVehiculo").value = placa;
     }
 </script>
 <%@include file = "../_down.jsp" %>

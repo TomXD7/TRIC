@@ -45,7 +45,7 @@ public class Vehiculos extends HttpServlet {
 
                 String sql = "";
                 if (request.getParameter("txtBusqueda") != null) {
-                    sql = "select * from vehiculo where nombre like ?";
+                    sql = "select * from vehiculo where tipo like ?";
                 } else {
                     sql = "select * from vehiculo";
                 }
@@ -101,13 +101,13 @@ public class Vehiculos extends HttpServlet {
                 try {
                     Operaciones.rollback();
                 } catch (SQLException ex1) {
-                    Logger.getLogger(Seguros.class.getName()).log(Level.SEVERE, null, ex1);
+                    Logger.getLogger(Vehiculos.class.getName()).log(Level.SEVERE, null, ex1);
                 }
             } finally {
                 try {
                     Operaciones.cerrarConexion();
                 } catch (SQLException ex) {
-                    Logger.getLogger(Seguros.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(Vehiculos.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
             request.getRequestDispatcher("Vehiculo/consulta_vehiculo.jsp").forward(request, response);
@@ -176,19 +176,19 @@ public class Vehiculos extends HttpServlet {
         switch (accion) {
             case "insertar_modificar": {
                 String idvehiculo = request.getParameter("txtIdvehiculo");
-                String modelo = request.getParameter("txtModelo");
                 Integer nPasajeros = new Integer(request.getParameter("txtPasajeros"));
-                String color = request.getParameter("txtColor");
                 String placa = request.getParameter("txtPlaca");
-                BigDecimal precio = new BigDecimal(request.getParameter("txtPrecio"));
                 String marca = request.getParameter("txtMarca");
+                String tipo = request.getParameter("txtTipo");
+                String descripcion = request.getParameter("txtDescripcion");
+                BigDecimal precio = new BigDecimal(request.getParameter("txtPrecio"));
                 try {
                     Conexion conn = new ConexionPool();
                     conn.conectar();
                     Operaciones.abrirConexion(conn);
                     Operaciones.iniciarTransaccion();
                     if (idvehiculo != null && !idvehiculo.equals("")) {
-                        Vehiculo v = new Vehiculo(Integer.parseInt(idvehiculo), modelo, nPasajeros, color, placa, precio, marca);
+                        Vehiculo v = new Vehiculo(Integer.parseInt(idvehiculo), nPasajeros, placa, marca, tipo, descripcion, precio);
                         v = Operaciones.actualizar(v.getIdvehiculo(), v);
                         if (v.getIdvehiculo() != 0) {
                             request.getSession().setAttribute("resultado", 1);
@@ -197,12 +197,12 @@ public class Vehiculos extends HttpServlet {
                         }
                     } else {
                         Vehiculo v = new Vehiculo();
-                        v.setModelo(modelo);
                         v.setNumero_pasajeros(nPasajeros);
-                        v.setColor(color);
                         v.setPlaca(placa);
-                        v.setPrecio(precio);
                         v.setMarca(marca);
+                        v.setTipo(tipo);
+                        v.setDescripcion(descripcion);
+                        v.setPrecio(precio);
                         v = Operaciones.insertar(v);
                         if (v.getIdvehiculo() != 0) {
                             request.getSession().setAttribute("resultado", 1);
@@ -228,7 +228,7 @@ public class Vehiculos extends HttpServlet {
                         Logger.getLogger(Vehiculo.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
-                response.sendRedirect(request.getContextPath() + "/Seguros");
+                response.sendRedirect(request.getContextPath() + "/Vehiculos");
                 break;
             }
         }
