@@ -2,15 +2,15 @@
 <%@include file = "../_top.jsp" %>
 <h1>Reservacion</h1>
 <br/>
-<head>
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <script> function abrirVentana (URL){     
-            ////funcion javascript para abrir un subventana para realizar     
-            ////busquedas, se le pasa la pagina a mostrar como parametro     
-            window.open(URL,"ventana1","width=700,height=400,scrollbars=YES,statusbar=YES,top=150,left=30 0") } </script> 
-    </head>
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<script> function abrirVentana(URL) {
+        //funcion javascript para abrir un subventana para realizar     
+        //busquedas, se le pasa la pagina a mostrar como parametro     
+        window.open(URL, "ventana1", "width=700,height=400,scrollbars=YES,statusbar=YES,top=150,left=30 0")
+    }
+</script> 
 <form name="form_reservacion" onsubmit="return validar();"
-      action="${pageContext.servletContext.contextPath}/Reservacion?accion=insertar_modificar"
+      action="${pageContext.servletContext.contextPath}/Reservaciones?accion=insertar_modificar"
       method="POST">
     <table border="0" id="table">
         <thead>
@@ -21,32 +21,38 @@
         <tbody>
             <tr>
                 <td>ID Reservacion</td>
-                <td><input type="text" name="txtIdReservacion" value="${reservacion.reservacion}" readonly="readonly" /></td>
+                <td><input type="text" name="txtIdReservacion" value="${reservacion.idreservacion}" readonly="readonly" /></td>
+                <td></td>
             </tr>
-             <tr>
+            <tr>
                 <td>Fecha Inicio</td>
                 <td><input type="date" name="txtFechaInicio"/></td>
+                <td></td>
             </tr>
-             <tr>
+            <tr>
                 <td>Fecha Entrega</td>
                 <td><input type="date" name="txtFechaFin" /></td>
+                <td></td>
             </tr>
-             <tr>
+            <tr>
                 <td>Agencia</td>
                 <td><input type="text" name="txtAgencia" value="${reservacion.agencia}"  /></td>
+                <td></td>
             </tr>
             <tr>
-                <td>ID Vehiculo</td>
-                <td><input type="text" name="txtVehiculo" value="${reservacion.idvehiculo}"  /></td>
+                <td>Vehiculo</td>
+                <td><input type="text" name="txtMejora" id="txtVehiculo" readonly="readonly"></td>
+                <td><input type="button" value="..." class="boton" onclick="abrirVentana('${pageContext.servletContext.contextPath}/Reservaciones?accion=vehiculos');"> </td>
+            </tr>
+            <tr>             
+                <td>Mejora</td>
+                <td><input type="text" name="txtMejora" id="txtMejora" readonly="readonly"></td>
+                <td><input type="button" value="..." class="boton" onclick="abrirVentana('${pageContext.servletContext.contextPath}/Reservaciones?accion=mejoras');"> </td>
             </tr>
             <tr>
-                <input type="text" name="txtIdmejora" id="txtIdmejora" size="2" readonly="readonly">             
-                <input type="text" name="txtMejora" id="txtMejora" readonly="readonly">             
-                <input type="button" value="..." class="boton" onclick="abrirVentana('${pageContext.servletContext.contextPath}/Reservaciones?accion=mejoras');"> 
-            </tr>
-            <tr>
-                <td>ID Seguro</td>
-                <td><input type="text" name="txtSeguro" value="${reservacion.idseguro}"  /></td>
+                <td>Seguro</td>
+                <td><input type="text" name="txtMejora" id="txtSeguro" readonly="readonly"></td>
+                <td><input type="button" value="..." class="boton" onclick="abrirVentana('${pageContext.servletContext.contextPath}/Reservaciones?accion=seguros');"> </td>
             </tr>
         </tbody>
     </table>
@@ -68,8 +74,7 @@
         }
         return true;
     }
-    function setDataMejoras(idmejora, mejora, precio){
-        document.getElementById("txtIdmejora").value = idmejora;
+    function setDataMejora(idmejora, mejora, precio) {
         document.getElementById("txtMejora").value = mejora;
     }
 </script>

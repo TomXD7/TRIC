@@ -108,9 +108,9 @@ public class Reservaciones extends HttpServlet {
                     Logger.getLogger(Mejoras.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-            request.getRequestDispatcher("Reservacion/consulta_mejora.jsp").forward(request, response);
+            request.getRequestDispatcher("Reservacion/consulta_reservacion.jsp").forward(request, response);
         } else if (accion.equals("2")) {
-            request.getRequestDispatcher("Reservacion/consulta_mejora.jsp").forward(request, response);
+            request.getRequestDispatcher("Reservacion/consulta_reservacion.jsp").forward(request, response);
         } else if (accion.equals("insertar")) {
             request.getRequestDispatcher("Reservacion/insertar_modificar.jsp").forward(request, response);
         }else if (accion.equals("modificar")) {
@@ -164,13 +164,13 @@ public class Reservaciones extends HttpServlet {
                 }
             }
             response.sendRedirect(request.getContextPath() + "/Reservaciones");
-        } else if(accion.equals("Mejoras")){
+        } else if(accion.equals("mejoras")){
              try {                
                  Conexion conn = new ConexionPool();
                               conn.conectar();               
              Operaciones.abrirConexion(conn);               
              Operaciones.iniciarTransaccion();                     
-             String sql = "select idmejora, mejora, precio from mejoras;";    
+             String sql = "select idmejora, nombre, precio from mejora;";    
              String[][] origenes = Operaciones.consultar(sql, null);          
              //declaracion de cabeceras a usar en la tabla HTML            
              String[] cabeceras = new String[]{               
@@ -202,6 +202,112 @@ public class Reservaciones extends HttpServlet {
                  tabla01= tab.getTabla();          
              request.setAttribute("tabla", tabla01);  
              request.getRequestDispatcher("Reservacion/mejoras.jsp").forward(request, response); 
+             } catch(Exception ex) {               
+                 try {                    
+                     Operaciones.rollback();     
+                 } catch (SQLException ex1) {     
+                     Logger.getLogger(Reservaciones.class.getName()).log(Level.SEVERE, null, ex1); 
+                 }             
+             } finally {       
+                 try {          
+                     Operaciones.cerrarConexion();      
+                 } catch (SQLException ex) {         
+                     Logger.getLogger(Reservaciones.class.getName()).log(Level.SEVERE, null, ex);  
+                 }           
+             }   
+        }else if(accion.equals("seguros")){
+             try {                
+                 Conexion conn = new ConexionPool();
+                              conn.conectar();               
+             Operaciones.abrirConexion(conn);               
+             Operaciones.iniciarTransaccion();                     
+             String sql = "select idseguro, nombre, precio from seguro;";    
+             String[][] origenes = Operaciones.consultar(sql, null);          
+             //declaracion de cabeceras a usar en la tabla HTML            
+             String[] cabeceras = new String[]{               
+                 "Id Seguro",               
+                 "Seguro",               
+                 "Precio"
+                      };             
+             //variable de tipo Tabla para generar la Tabla HTML    
+             Tabla tab = new Tabla(origenes, //array que contiene los datos       
+                     "100%", //ancho de la tabla px | %         
+                     Tabla.STYLE.TABLE01, //estilo de la tabla     
+                     Tabla.ALIGN.LEFT,  // alineacion de la tabla        
+                     cabeceras); //array con las cabeceras de la tabla   
+             tab.setMetodoFilaSeleccionable("_Seleccionar_");            
+             //url del proyecto        
+             tab.setPageContext(request.getContextPath());  
+             tab.setFilaSeleccionable(true);              
+             //icono para modificar y eliminar //         
+             tab.setIconoModificable("/iconos/edit.png"); //    
+             
+             tab.setIconoEliminable("/iconos/delete.png");      
+             //columnas seleccionables            
+             tab.setColumnasSeleccionables(new int[]{1});        
+             //pie de tabla           
+             tab.setPie("Resultado Seguros");   
+             //imprime la tabla en pantalla         
+             String tabla01="No hay datos";         
+             if (origenes!=null)                    
+                 tabla01= tab.getTabla();          
+             request.setAttribute("tabla", tabla01);  
+             request.getRequestDispatcher("Reservacion/seguros.jsp").forward(request, response); 
+             } catch(Exception ex) {               
+                 try {                    
+                     Operaciones.rollback();     
+                 } catch (SQLException ex1) {     
+                     Logger.getLogger(Reservaciones.class.getName()).log(Level.SEVERE, null, ex1); 
+                 }             
+             } finally {       
+                 try {          
+                     Operaciones.cerrarConexion();      
+                 } catch (SQLException ex) {         
+                     Logger.getLogger(Reservaciones.class.getName()).log(Level.SEVERE, null, ex);  
+                 }           
+             }   
+        }else if(accion.equals("vehiculos")){
+             try {                
+                 Conexion conn = new ConexionPool();
+                              conn.conectar();               
+             Operaciones.abrirConexion(conn);               
+             Operaciones.iniciarTransaccion();                     
+             String sql = "select idvehiculo, modelo, numero_pasajeros, color, placa, precio, marca from vehiculo;";    
+             String[][] origenes = Operaciones.consultar(sql, null);          
+             //declaracion de cabeceras a usar en la tabla HTML            
+             String[] cabeceras = new String[]{               
+                 "Id Vehiculo",               
+                 "Modelo",               
+                 "Numero de pasajeros",
+                 "Color",
+                 "Placa",
+                 "Precio",
+                 "Marca"
+                      };             
+             //variable de tipo Tabla para generar la Tabla HTML    
+             Tabla tab = new Tabla(origenes, //array que contiene los datos       
+                     "100%", //ancho de la tabla px | %         
+                     Tabla.STYLE.TABLE01, //estilo de la tabla     
+                     Tabla.ALIGN.LEFT,  // alineacion de la tabla        
+                     cabeceras); //array con las cabeceras de la tabla   
+             tab.setMetodoFilaSeleccionable("_Seleccionar_");            
+             //url del proyecto        
+             tab.setPageContext(request.getContextPath());  
+             tab.setFilaSeleccionable(true);              
+             //icono para modificar y eliminar //         
+             tab.setIconoModificable("/iconos/edit.png"); //    
+             
+             tab.setIconoEliminable("/iconos/delete.png");      
+             //columnas seleccionables            
+             tab.setColumnasSeleccionables(new int[]{1});        
+             //pie de tabla           
+             tab.setPie("Resultado Vehiculos");   
+             //imprime la tabla en pantalla         
+             String tabla01="No hay datos";         
+             if (origenes!=null)                    
+                 tabla01= tab.getTabla();          
+             request.setAttribute("tabla", tabla01);  
+             request.getRequestDispatcher("Reservacion/vehiculos.jsp").forward(request, response); 
              } catch(Exception ex) {               
                  try {                    
                      Operaciones.rollback();     

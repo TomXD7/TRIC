@@ -10,14 +10,14 @@
 </c:if>
 <h2>Listado de Reservaciones</h2><br>
 <div class="busqueda" style="width: 50%; text-align: right">
-    <form action="${pageContext.servletContext.contextPath}/Reservacion" method="get">
+    <form action="${pageContext.servletContext.contextPath}/Reservaciones" method="get">
         <input type="text" name="txtBusqueda" id="txtBusqueda" value="${valor}" />
         <input type="submit" value="Buscar"/>
     </form>
 </div>
 <div class="buttons">
     <ul>
-        <li><a href="${pageContext.servletContext.contextPath}/Reservacion?accion=insertar" id="Res">Nuevo</a></li>
+        <li><a href="${pageContext.servletContext.contextPath}/Reservaciones?accion=insertar" id="Res">Nuevo</a></li>
     </ul>
 </div>
 <br/>

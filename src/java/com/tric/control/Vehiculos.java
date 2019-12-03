@@ -122,7 +122,7 @@ public class Vehiculos extends HttpServlet {
                 Operaciones.abrirConexion(conn);
                 Operaciones.iniciarTransaccion();
                 Vehiculo v = Operaciones.get(Integer.parseInt(request.getParameter("id")), new Vehiculo());
-                request.setAttribute("Seguro", v);
+                request.setAttribute("vehiculo", v);
                 Operaciones.commit();
             } catch (Exception ex) {
                 try {

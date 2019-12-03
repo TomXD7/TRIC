@@ -110,7 +110,7 @@ public class Seguros extends HttpServlet {
                 Operaciones.abrirConexion(conn);
                 Operaciones.iniciarTransaccion();
                 Seguro s = Operaciones.get(Integer.parseInt(request.getParameter("id")), new Seguro());
-                request.setAttribute("Seguro", s);
+                request.setAttribute("seguro", s);
                 Operaciones.commit();
             } catch (Exception ex) {
                 try {

@@ -111,7 +111,7 @@ public class Mejoras extends HttpServlet {
                 Operaciones.abrirConexion(conn);
                 Operaciones.iniciarTransaccion();
                 Mejora m = Operaciones.get(Integer.parseInt(request.getParameter("id")), new Mejora());
-                request.setAttribute("Mejora", m);
+                request.setAttribute("mejora", m);
                 Operaciones.commit();
             } catch (Exception ex) {
                 try {
